@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [\App\Http\Controllers\PagesController::class, 'index']);
 
 Route::get('/register', [\App\Http\Controllers\PagesController::class, 'register']);
+//registerer refers to the "action" in the form
+Route::post("registerer", [\App\Http\Controllers\RegisterController::class, 'getData']);
+
 
 
 // Route::get('/users/{id}/{name}', function ($id, $name) {
