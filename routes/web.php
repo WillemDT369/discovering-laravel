@@ -15,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [\App\Http\Controllers\PagesController::class, 'index']);
 
-Route::get('/about', function(){
-    return view('about');
-});
+Route::get('/register', [\App\Http\Controllers\PagesController::class, 'register']);
 
 
 // Route::get('/users/{id}/{name}', function ($id, $name) {
