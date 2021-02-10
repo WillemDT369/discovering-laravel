@@ -13,16 +13,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
+Route::get('/', [\App\Http\Controllers\PagesController::class, 'index']);
+
+Route::get('/about', function(){
+    return view('about');
+});
+
+
+// Route::get('/users/{id}/{name}', function ($id, $name) {
+//     return 'This user is called ' . $name . ' and his id is ' . $id . '.';
 // });
 
+// Route::get('/', function()
+// {
+//    return View::make('pages.home');
+// });
+// Route::get('/register', function()
+// {
+//    return View::make('pages.register');
+// });
 
-Route::get('/', function()
-{
-   return View::make('pages.home');
-});
-Route::get('/register', function()
-{
-   return View::make('pages.register');
-});
+// Route::get('/hello', function()
+// {
+//     return 'Hello World';
+// });
+
