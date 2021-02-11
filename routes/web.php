@@ -16,10 +16,9 @@ use App\Http\Controllers;
 */
 
 Route::get('/', [\App\Http\Controllers\PagesController::class, 'index']);
-
-Route::get('/register', [\App\Http\Controllers\PagesController::class, 'register']);
+Route::get('/register', [\App\Http\Controllers\RegisterController::class, 'register']);
 //registerer refers to the "action" in the form
-Route::post("registerer", [\App\Http\Controllers\RegisterController::class, 'getData']);
+Route::post("register", [\App\Http\Controllers\RegisterController::class, 'getData']);
 
 
 

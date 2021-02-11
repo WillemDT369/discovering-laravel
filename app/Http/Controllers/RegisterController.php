@@ -6,14 +6,14 @@ use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
-    public function formSubmit(Request $request)
-    {
-        print_r($request->input());
+    public function register() {
+        return view('pages.register');
     }
-
 
     public function getData(Request $request)
     {
-        return $request->input();
+        request()->all();
+        dd(request()->all());
+        return view('register');
     }
 }

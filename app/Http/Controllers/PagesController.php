@@ -10,7 +10,7 @@ class PagesController extends Controller
         return view('pages.index');
     }
 
-    public function register() {
-        return view('pages.register');
-    }
+    // public function register() {
+    //     return view('pages.register');
+    // }
 }
